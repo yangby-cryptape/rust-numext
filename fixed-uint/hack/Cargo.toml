@@ -14,7 +14,7 @@ license = "Apache-2.0 OR MIT"
 proc-macro = true
 
 [dependencies]
-nfuint-core = { package = "numext-fixed-uint-core", version = "=0.1.5", path = "../core" }
+numext-fixed-uint-core = { version = "=0.1.5", path = "../core" }
 syn = { version = "~1.0", features = ["extra-traits"] }
 quote = "~1.0"
 proc-macro2 = "~1.0"
@@ -26,19 +26,19 @@ bits_all = [
     "bits_520", "bits_1024",  "bits_2048", "bits_4096",
 ]
 support_all = ["support_rand", "support_heapsize", "support_serde"]
-bits_128 =  ["nfuint-core/bits_128" ]
-bits_160 =  ["nfuint-core/bits_160" ]
-bits_224 =  ["nfuint-core/bits_224" ]
-bits_256 =  ["nfuint-core/bits_256" ]
-bits_384 =  ["nfuint-core/bits_384" ]
-bits_512 =  ["nfuint-core/bits_512" ]
-bits_520 =  ["nfuint-core/bits_520" ]
-bits_1024 = ["nfuint-core/bits_1024"]
-bits_2048 = ["nfuint-core/bits_2048"]
-bits_4096 = ["nfuint-core/bits_4096"]
-support_rand     = ["nfuint-core/support_rand"    ]
-support_heapsize = ["nfuint-core/support_heapsize"]
-support_serde    = ["nfuint-core/support_serde"   ]
+bits_128 =  ["numext-fixed-uint-core/bits_128" ]
+bits_160 =  ["numext-fixed-uint-core/bits_160" ]
+bits_224 =  ["numext-fixed-uint-core/bits_224" ]
+bits_256 =  ["numext-fixed-uint-core/bits_256" ]
+bits_384 =  ["numext-fixed-uint-core/bits_384" ]
+bits_512 =  ["numext-fixed-uint-core/bits_512" ]
+bits_520 =  ["numext-fixed-uint-core/bits_520" ]
+bits_1024 = ["numext-fixed-uint-core/bits_1024"]
+bits_2048 = ["numext-fixed-uint-core/bits_2048"]
+bits_4096 = ["numext-fixed-uint-core/bits_4096"]
+support_rand     = ["numext-fixed-uint-core/support_rand"    ]
+support_heapsize = ["numext-fixed-uint-core/support_heapsize"]
+support_serde    = ["numext-fixed-uint-core/support_serde"   ]
 
 [badges]
 travis-ci = { repository = "cryptape/rust-numext" }
