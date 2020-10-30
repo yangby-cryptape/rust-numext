@@ -40,8 +40,8 @@
 //! }
 //! ```
 
-pub use nfuint_core::prelude;
-pub use nfuint_core::{FixedUintError, FromSliceError, FromStrError, IntoSliceError};
+pub use numext_fixed_uint_core::prelude;
+pub use numext_fixed_uint_core::{FixedUintError, FromSliceError, FromStrError, IntoSliceError};
 
 macro_rules! reexport {
     ([$(($name:ident, $macro_name:ident),)+]) => {
@@ -51,9 +51,9 @@ macro_rules! reexport {
         $(reexport!($name, $macro_name);)+
     };
     ($name:ident, $macro_name:ident) =>    {
-        pub use nfuint_core::$name;
+        pub use numext_fixed_uint_core::$name;
         /// A macro used to construct a fixed uint in compile time.
-        pub use nfuint_hack::$macro_name;
+        pub use numext_fixed_uint_hack::$macro_name;
     };
 }
 

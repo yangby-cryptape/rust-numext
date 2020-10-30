@@ -36,13 +36,13 @@ macro_rules! impl_func {
                     panic!("Input is empty.");
                 }
                 let (value_result, input_type) = if input.len() < 3 {
-                    (nfuint_core::$type::from_dec_str(&input), "decimal")
+                    (numext_fixed_uint_core::$type::from_dec_str(&input), "decimal")
                 } else {
                     match &input[..2] {
-                        "0b" => (nfuint_core::$type::from_bin_str(&input[2..]), "binary"),
-                        "0o" => (nfuint_core::$type::from_oct_str(&input[2..]), "octal"),
-                        "0x" => (nfuint_core::$type::from_hex_str(&input[2..]), "hexadecimal"),
-                        _ => (nfuint_core::$type::from_dec_str(&input), "decimal"),
+                        "0b" => (numext_fixed_uint_core::$type::from_bin_str(&input[2..]), "binary"),
+                        "0o" => (numext_fixed_uint_core::$type::from_oct_str(&input[2..]), "octal"),
+                        "0x" => (numext_fixed_uint_core::$type::from_hex_str(&input[2..]), "hexadecimal"),
+                        _ => (numext_fixed_uint_core::$type::from_dec_str(&input), "decimal"),
                     }
                 };
                 let value = value_result.unwrap_or_else(|err| {
